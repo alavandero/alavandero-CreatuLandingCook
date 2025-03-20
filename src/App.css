@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 1px 1%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Add margin to prevent content from being hidden under the fixed navbar */
+body {
+  padding-top: 180px;
+}
+
+/* Logo styles */
+.navbar .logo img {
+  width: 200px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  flex-grow: 0.5;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Style for the links */
+.nav-links a {
+  color: grey;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Active state for the current link */
+.nav-links a.active {
+  color: white;
+}
+
+/* Hover state (optional) */
+.nav-links a:hover {
+  color: white;
+}
+
+/* Cart widget styles */
+.cart-widget {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.cart-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 12px;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+/* Cart container styles */
+.cart-container {
+  min-height: calc(100vh - 180px);
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.cart-list {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+}
+
+.cart-item {
+  background-color: #fff;
+  border-bottom: 1px solid #e9ecef;
+  color: #333;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.cart-item:hover {
+  background-color: #f5f5f5;
+}
+
+.cart-item-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  flex-grow: 1;
+}
+
+.cart-item-title {
+  font-weight: 600;
+  color: #333;
+  font-size: 18px;
+  flex-grow: 1;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.cart-item-quantity {
+  color: #666;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #f8f9fa;
+  padding: 6px 12px;
+  border-radius: 15px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.cart-close {
+  background-color: #ff0000;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.cart-close:hover {
+  transform: scale(1.1);
+  background-color: #e60000;
+}
+
+.empty-cart-message {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.empty-cart-message h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.empty-cart-message p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Item card styles */
+.item-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  margin: 15px;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+}
+
+.item-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.item-details {
+  padding: 20px;
+}
+
+.item-details h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.item-details p {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+      gap: 20px;
+  }
+
+  .cart-list {
+      max-width: 70%;
+  }
+
+  .empty-cart-message {
+      max-width: 70%;
+  }
+}
+
